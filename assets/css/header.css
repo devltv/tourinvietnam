@@ -1,0 +1,261 @@
+.header{
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    box-shadow: 0px 0px 3px rgb(80, 80, 80);
+    position: fixed;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.header__menu-btn{
+    display: none;
+    padding-left: 16px;
+    line-height: 56px;
+    font-size: 24px;
+}
+
+.menu__mobile{
+    display: none;
+    max-width: 100%;
+    width: 320px;
+    background-color: rgb(39, 38, 38);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.menu__mobile a{
+    text-decoration: none;
+    color: rgb(194, 194, 194);
+    font-size: 1.3rem;
+}
+
+.menu__mobile-head{
+    border-bottom: 2px solid rgb(194, 194, 194);
+}
+
+.menu__mobile-close{
+    font-size: 1.7rem;
+    color: #bbb;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    padding: 0 16px;
+    line-height: 48px;
+}
+
+.menu__mobile-list{
+    border-bottom: 2px solid rgb(194, 194, 194);
+}
+
+.menu__mobile-login,
+.menu__mobile-item{
+    display: block;
+    line-height: 56px;
+    text-align: center;
+    position: relative;
+}
+
+.menu__mobile-item + .menu__mobile-item{
+    border-top: 1px dotted #ff8c00;
+}
+.menu__mobile-item:hover,
+.menu__mobile-login:hover{
+    background-color: rgb(255, 254, 254);
+    opacity: 0.8;
+}
+
+.menu__mobile-login{
+    display: none;
+}
+
+#header__menu--check{
+    display: none;
+}
+
+.header__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(204, 204, 204, 0.3);
+    z-index: 1;
+    display: none;
+}
+
+
+.header__logo{
+    padding-left: 15px;
+}
+
+.header__logo a{
+    background-image: url("../img/logo/logo.png");
+    background-size: contain;
+    display: block;
+    width: 140px;
+    height: 36px;
+    margin: 8px 15px 12px;
+    background-repeat: no-repeat;
+}
+
+.header__nav{
+    display: flex;
+    flex-grow: 1;
+}
+
+.header__nav li{
+    position: relative;
+}
+
+.header__nav li a{
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 23px 10px 12px;
+    display: block;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__nav li:hover a{
+    border-bottom: 4px solid #ff8c00;
+    opacity: 0.8;
+}
+
+.header__search i{
+    font-size: 18px;
+    margin-top: -3px;
+}
+
+.header__option{
+    display: flex;
+    min-width: 250px;
+    line-height: 56px;
+}
+
+.header__option a{
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    font-weight: 600;
+}
+
+.header__option i{
+    width: 12px;
+    height: 16px;
+}
+
+.header__option p{
+    display: inline-block;
+}
+
+.header__option--addbox{
+}
+
+.header__option--addbox a{
+    border: 1px solid #ff8c00;
+    border-radius: 3px;
+    color: #ff8c00;
+    padding: 5px 12px;
+}
+.header__option--addbox i{
+    font-size: 14px;
+}
+
+.header__option--gift a{
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 3px 8px 3px 3px;
+    position: relative;
+}
+
+.header__option--gift i{
+    font-size: 18px;
+}
+
+.header__option--login{
+
+}
+
+.header__option--login i{
+    font-size: 14px;
+}
+
+/* Laptop */
+@media only screen and (min-width: 1024px) and (max-width: 1150px){
+    .header__option--addbox{
+        display: none;
+    }
+    .header__option{
+        min-width: 100px;
+    }
+}
+
+/* Tablet and Mobile */
+@media only screen and (max-width: 1023px){
+    #header__menu--check:checked ~ .menu__mobile,
+    #header__menu--check:checked ~ .header__overlay{
+        display: block;
+    }
+    .new::before,
+    .hot::before{
+        right: 10%;
+        top: 20%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1023px){
+    /* display none for nav and addbox */
+    .header__nav{
+        display: none;
+    }
+    .header__option--addbox{
+        display: none;
+    }
+
+    /* set up icon bars, logo, option */
+    .header__menu-btn{
+        display: block;
+    }
+
+
+    .header__option{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+    .header__option--gift a{
+        margin: 0 12px;
+    }
+}
+
+/* Moblie */
+@media only screen and (max-width: 739px)
+{
+    /* display none for nav and addbox */
+    .header__nav{
+        display: none;
+    }
+    .header__option{
+        display: none;
+    }
+    .header__menu-btn{
+        display: block;
+    }
+    .header__logo{
+        flex-grow: 1;
+    }
+    .menu__mobile-login{
+        display: block;
+    }
+}

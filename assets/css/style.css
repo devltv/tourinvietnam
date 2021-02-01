@@ -1,0 +1,67 @@
+/* RESET CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STYLE COMMOM */
+ul{
+    list-style-type: none;
+}
+
+.hot::before{
+    content: "Hot";
+    position: absolute;
+    background-color: #ff8c00;
+    right: -6%;
+    top: 16%;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+.new::before{
+    content: "New";
+    position: absolute;
+    background-color: #ff8c00;
+    right: -6%;
+    top: 16%;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+.number::before{
+    content: "22";
+    position: absolute;
+    background-color: #ff8c00;
+    right: -32%;
+    top: -36%;
+    color: #fff;
+    padding: 3px 4px;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+/* MAIN */
+main{
+
+}
+
+.slider{
+
+}
+
+.container{
+
+}
+
+.footer{
+
+}
